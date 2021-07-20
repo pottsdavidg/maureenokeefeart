@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: Handwriting;
+    src: url(Handwriting-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Montserrat, Dosis, Roboto, 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.page-header {
+    top: 0px;
+    z-index: 2;
+    padding: 15px;
+    position: fixed;
+    background-color: #ffffff80;
+    backdrop-filter: blur(5px);
+}
+
+.link-list {
+    font-weight: bold;
+    display: flex;
+    align-content: left;
+}
+
+.link-div {
+    margin: auto;
+}
+
+.link {
+    padding: 10px;
+    color: #000000;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: #00000030;
+    transition: 1s;
+}
+
+.home-page-main {
+    width: 70vw;
+    margin: 0px auto;
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 0px;
+}

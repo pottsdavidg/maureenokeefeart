@@ -1,0 +1,65 @@
+
+.main-content-container {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.image-container {
+    width: auto;
+    margin: auto;
+    justify-self: center;
+    align-self: center  ;
+}
+
+.image-container img {
+    width: auto;
+    margin: 25px;
+}
+
+.paragraph-container {
+    width: auto;    
+    margin: 25px;
+    padding: 15px;
+    background-color: #f0f0f0;
+}
+
+.video-container {
+    width: auto;
+    height: 500px;
+    margin: 25px;
+}
+
+.video-container iframe {
+    height: 100%;
+}
+
+.other-information {
+    width: auto;
+    margin: 25px;
+    background-color: #f0f0f0;
+}
+
+.awards,
+.exhibitions {
+    width: auto;
+    padding: 10px;
+}
+
+.download-button {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px 25px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.download-button:hover {
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: 1s;
+}

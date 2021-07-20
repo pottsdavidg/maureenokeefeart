@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Maureen O'Keefe</title>
+        <link rel="stylesheet" href="../styles/work.css">
+        <link rel="stylesheet" href="../styles/general.css">
+        <link rel="icon" href="../images/icon.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+        <header class="page-header">
+            
+            <div class="link-list">
+                <div class="link-div"><a class="link" href="../pages/home.html">Maureen O'Keefe</a></div>
+                <div class="link-div"><a class="link" href="../pages/work.html">WORK</a></div>
+                <div class="link-div"><a class="link" href="../pages/contact.html">CONTACT</a></div>
+                <div class="link-div"><a class="link" href="../pages/about.html">ABOUT</a></div>
+                <div class="link-div"><a class="link" href="../pages/shop.html">SHOP</a></div>
+            </div>
+
+        </header>
+
+        <div class="work-list">
+            <a id="home-page" class="work-link selected-link" onclick="selectPage('home-page')" href="../pages/work.html">Home</a>
+            <a id="mirw-page" class="work-link" onclick="selectPage('mirw-page')" href="../pages/mirrored-works.html">Mirrored Works</a>
+            <a id="nude-page" class="work-link" onclick="selectPage('nude-page')" href="../pages/nudes-and-figures.html">Nudes and Figures</a>
+            <a id="trin-page" class="work-link" onclick="selectPage('trin-page')" href="../pages/trinities-and-spirits.html">Trinities and Spirits</a>
+            <a id="blin-page" class="work-link" onclick="selectPage('blin-page')" href="../pages/blind-contour-portraits.html">Blind Contour Portraits</a>
+            <a id="stil-page" class="work-link" onclick="selectPage('stil-page')" href="../pages/still-life.html">Still Life</a>
+            <a id="idol-page" class="work-link" onclick="selectPage('idol-page')" href="../pages/idolotry.html">Idolotry</a>
+        </div>
+
+        <main class="work-page-main">
+
+            <div id="display" class="work-content-container">
+                <div id="large-display" class="selected-display"></div>
+                <div id="cover"></div>
+            </div>
+
+        </main>
+
+        <footer class="page-footer">
+            <div id="copyright-text">&#xA9; 2021 MAUREEN O'KEEFE</div>
+        </footer>
+
+    </body>
+
+    <script type="module" src="../scripts/work.js"></script>
+    
+</html>

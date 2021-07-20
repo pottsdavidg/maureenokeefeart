@@ -1,0 +1,90 @@
+#survey-form {
+    width: auto;
+    background: #ffffff;
+    padding: 10px;
+    margin-top: 70px;
+}
+    
+.form-div {
+    width: auto;
+    display: flex;
+    padding: 5px;
+    background: #f0f0f0;    
+    border: 0px;
+}
+    
+.submit-button-div {
+    width: auto;
+    display: flex; 
+    background: #ffffff; 
+    padding: 5px; 
+}
+    
+.label-div {
+    width: 100px;
+    margin: auto;
+    color: #000000;
+    padding: 3px;
+    background: #ffffff;
+    font-family: Montserrat;
+    font-size: 15px;
+}
+    
+.textbox {
+    width: 100%;
+    color: #000000;
+    padding: 5px;
+    margin-left: 5px;
+    border: 0px;
+    height: 100%;
+    background: #ffffff;
+    font-family: Montserrat;
+    font-size: 15px;
+}
+    
+.textbox-large {
+    width: 100%;
+    color: #000000;
+    resize: none;
+    height: 200px;
+    border: 0px;
+    background: #ffffff;
+    font-family: Montserrat;
+    font-size: 25px;
+}
+    
+#submit-button {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    border: 0px;
+    background: #f0f0f0 ;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 25px;
+}
+
+#submit-button:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container a {
+    width: auto;
+    margin: 10px;
+}
+
+.image-link {
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.image-link:hover {
+    background-color: #00000030;
+}

@@ -1,0 +1,20 @@
+
+/*
+
+Here is the styles specific to the Home page.
+Changing these will only alter home page styles and such.
+I decided to split up the files so I wouldn't have a huge confusing one.
+
+*/
+
+.artwork-container {
+    margin: 15px;
+    padding: 25px;
+    background-color: #ffffff;
+}
+
+.desc-container {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}

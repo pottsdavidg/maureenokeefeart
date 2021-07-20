@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Maureen O'Keefe</title>
+        <link rel="stylesheet" href="../styles/general.css">
+        <link rel="stylesheet" href="../styles/contact.css">
+        <link rel="icon" href="../images/icon.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+        <header class="page-header">
+            
+            <div class="link-list">
+                <div class="link-div"><a class="link" href="../pages/home.html">Maureen O'Keefe</a></div>
+                <div class="link-div"><a class="link" href="../pages/work.html">WORK</a></div>
+                <div class="link-div"><a class="link" href="../pages/contact.html">CONTACT</a></div>
+                <div class="link-div"><a class="link" href="../pages/about.html">ABOUT</a></div>
+                <div class="link-div"><a class="link" href="../pages/shop.html">SHOP</a></div>
+            </div>
+
+        </header>
+
+        <main class="home-page-main">
+
+            <div class="main-content-container">
+
+                <form id="survey-form" action="https://formsubmit.co/pottsdavidg@gmail.com" method="POST">
+
+                    <div class="form-div">
+                        <div class="label-div">
+                            <label id="name-label" for="name">NAME:</label>
+                        </div>
+                        <input class="textbox" type="text" id="name" name="_replyto" placeholder="Last, First" required>
+                    </div>
+    
+                    <div class="form-div">
+                        <div class="label-div">
+                            <label id="email-label" for="email">EMAIL:</label>
+                        </div>
+                        <input class="textbox" type="email" id="email" name="email" placeholder="email@company.com" required>
+                    </div>
+    
+                    <div class="form-div">
+                        <div class="label-div">
+                            <label id="dropdown-label" for="number">SUBJECT:</label>
+                        </div>
+                        <select class="textbox" name="_subject" id="dropdown" required>
+                            <option disabled selected value>Select One</option>
+                            <option value>Promotion</option>
+                            <option value>Collaboration</option>
+                            <option value>Custom Order</option>
+                            <option value>Other</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-div" style="display: block;">
+                        <textarea name="message" class="textbox-large" rows="10" cols="50" id="short-response" placeholder="- Message for Maureen O'Keefe." required></textarea>
+                    </div>
+    
+                    <div class="submit-button-div">
+                        <input type="submit" value="Submit" id="submit-button">
+                    </div>
+    
+                </form>
+
+                <div class="contact-container">
+                    <a href="https://www.instagram.com/maureenok/" target="_blank"><img class="image-link" src="../images/instagram.png"></a>
+                    <a href="https://www.youtube.com/watch?v=YjBPdeuHW2s&ab_channel=GatewayArtsCouncil" target="_blank"><img class="image-link" src="../images/youtube.png"></a>
+                    <a href="https://www.facebook.com/maureenokfineart" target="_blank"z><img class="image-link" src="../images/facebook.png"></a>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="page-footer">
+            <div id="copyright-text">&#xA9; 2021 MAUREEN O'KEEFE</div>
+        </footer>
+
+    </body>
+    
+</html>
