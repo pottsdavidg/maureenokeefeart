@@ -63,6 +63,7 @@ const setHiddenDisplay = (aLink) => {
 
     let result = '';
     const displayImage = all.filter(image => image.link === aLink)[0];
+    console.log(displayImage);
     
     result += `<img class="large-image" src="${displayImage.link}">`;
     result += `<div class="large-image-description">`;
@@ -101,6 +102,7 @@ const updateDisplay = (page) => {
 const selectPage = (ID) => {
     
     let tagless = title.filter(name => name != ID);
+    console.log(tagless);
     tagless.forEach(tag => {
         document.getElementById(tag).classList.remove('selected-link');
     });
@@ -130,8 +132,10 @@ const updatePage = () => {
 
 [...document.querySelectorAll('div.work-link')].forEach(item => {
     item.addEventListener('click', selectPage(item.id));
+    console.log(item.id);
 });
 
 [...document.querySelectorAll('div.image-container')].forEach(item => {
     item.addEventListener('click', setHiddenDisplay(item.id));
+    console.log(item.id);
 });
