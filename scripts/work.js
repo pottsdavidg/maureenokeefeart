@@ -108,6 +108,11 @@ const selectPage = (ID) => {
 
 }
 
+const checkClass = (classList, className) => {
+    if (classList.every(item => item != className)) return false;
+    return true;
+}
+    
 const updatePage = () => {
 
     let elementClasses = [
@@ -121,7 +126,7 @@ const updatePage = () => {
     ];
 
     for (let i = 0; i < 7; i++) {
-        if (elementClasses[i].includes('selected-link')) {
+        if (checkClass(elementClasses[i], 'selected-link')) {
             updateDisplay(title[i]);
         }
     }
