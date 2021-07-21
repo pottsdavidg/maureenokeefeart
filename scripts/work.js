@@ -147,4 +147,4 @@ const updatePage = () => {
     
 });
 
-window.onload = () => updateDisplay('all');
+window.onload = () => updateDisplay('home-page');
