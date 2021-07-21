@@ -59,26 +59,6 @@ const fetchArtTemplate = (key) => {
 
 }
 
-const setHiddenDisplay = (aLink) => {
-
-    let result = '';
-    const displayImage = all.filter(image => image.link === aLink)[0];
-    console.log(displayImage);
-    
-    result += `<img class="large-image" src="${displayImage.link}">`;
-    result += `<div class="large-image-description">`;
-    result += `<div>${displayImage.title}</div>`;
-
-    if (displayImage.hasOwnProperty('style')) result += `<div>${displayImage.style}</div>`;
-    if (displayImage.hasOwnProperty('size')) result += `<div>${displayImage.size}</div>`;
-    if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
-    if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
-
-    result += `</div><a href="#" id="cancel">BACK</a>`;
-    document.getElementById('large-display').innerHTML = result;
-
-}
-
 const updateDisplay = (page) => {
 
     let content = '';
@@ -131,11 +111,47 @@ const updatePage = () => {
 }
 
 [...document.querySelectorAll('div.work-link')].forEach(item => {
-    item.addEventListener('click', selectPage(item.id));
+    
+    item.addEventListener('click', (ID) => {
+        
+        let tagless = title.filter(name => name != ID);
+        console.log(tagless);
+        
+        tagless.forEach(tag => {
+            document.getElementById(tag).classList.remove('selected-link');
+        });
+        
+        document.getElementById(ID).classList.add('selected-link');
+        updatePage();
+        
+    });
+    
     console.log(item.id);
+    
 });
 
 [...document.querySelectorAll('div.image-container')].forEach(item => {
-    item.addEventListener('click', setHiddenDisplay(item.id));
+    
+    item.addEventListener('click', (aLink) => {
+        
+        let result = '';
+        const displayImage = all.filter(image => image.link === aLink)[0];
+        console.log(displayImage);
+        
+        result += `<img class="large-image" src="${displayImage.link}">`;
+        result += `<div class="large-image-description">`;
+        result += `<div>${displayImage.title}</div>`;
+        
+        if (displayImage.hasOwnProperty('style')) result += `<div>${displayImage.style}</div>`;
+        if (displayImage.hasOwnProperty('size')) result += `<div>${displayImage.size}</div>`;
+        if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
+        if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
+        
+        result += `</div><a href="#" id="cancel">BACK</a>`;
+        document.getElementById('large-display').innerHTML = result;
+        
+    });
+    
     console.log(item.id);
+    
 });
