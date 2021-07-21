@@ -144,3 +144,5 @@ const updatePage = () => {
     console.log(item.id);
     
 });
+
+window.onload = () => updateDisplay('all');
