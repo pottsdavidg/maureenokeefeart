@@ -7,8 +7,6 @@ const all = [
     ...art.stillLife
 ];
 
-console.log(all);
-
 const title = [
     'home-page', 
     'mirw-page', 
@@ -21,7 +19,7 @@ const title = [
 
 const returnTemplate = (link) => {
     return `
-    <div class="image-container" onclick="setHiddenDisplay('${link}')">
+    <div id="${link}" class="image-container">
         <a href="#large-display">
             <img class="list-image" src="${link}" width="auto">
         </a>
@@ -111,11 +109,6 @@ const selectPage = (ID) => {
 
 }
 
-const checkClass = (classList, className) => {
-    if (classList.every(item => item != className)) return false;
-    return true;
-}
-    
 const updatePage = () => {
 
     let elementClasses = [
@@ -129,16 +122,16 @@ const updatePage = () => {
     ];
 
     for (let i = 0; i < 7; i++) {
-        if (checkClass(elementClasses[i], 'selected-link')) {
+        if (elementClasses[i].includes('selected-link')) {
             updateDisplay(title[i]);
         }
     }
 }
 
-document.getElementById(title[0]).addEventListener('click', selectPage(title[0]));
-document.getElementById(title[1]).addEventListener('click', selectPage(title[1]));
-document.getElementById(title[2]).addEventListener('click', selectPage(title[2]));
-document.getElementById(title[3]).addEventListener('click', selectPage(title[3]));
-document.getElementById(title[4]).addEventListener('click', selectPage(title[4]));
-document.getElementById(title[5]).addEventListener('click', selectPage(title[5]));
-document.getElementById(title[6]).addEventListener('click', selectPage(title[6]));
+[...document.querySelectorAll('div.work-link')].forEach(item => {
+    item.addEventListener('click', selectPage(item.id));
+});
+
+[...document.querySelectorAll('div.image-container')].forEach(item => {
+    item.addEventListener('click', setHiddenDisplay(item.id));
+});

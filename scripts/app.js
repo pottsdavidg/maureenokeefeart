@@ -253,3 +253,7 @@ export {
     stillLife, 
     idolatry
 };
+
+
+
+const sayHello = (message) => console.log(message);

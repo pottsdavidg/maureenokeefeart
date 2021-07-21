@@ -19,7 +19,6 @@
 }
 
 .work-link:hover {
-    cursor: pointer;
     background-color: #00000020;
     transition: 1s;
 }
