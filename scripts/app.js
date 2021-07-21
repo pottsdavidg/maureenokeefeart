@@ -59,7 +59,7 @@ const nudesAndFigures = [
         style: 'Acrylic on Panel',
         size: '36in. x 48in.',
         year: 2018,
-        link: '../images/mirrored-works/HousewivesLoveKirby_acrylic_36x48_1200.jpg'
+        link: '../images/mirrored-works/Maureen_OKeefe_HousewivesLoveKirby_acrylic_36x48_1200.jpg'
     },
     {
         title: 'Parallax Eve 2',
