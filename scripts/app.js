@@ -244,7 +244,7 @@ const stillLife = [
 
 const idolatry = [];
 
-/*
+
 export {
     nudesAndFigures, 
     mirroredWorks, 
@@ -253,6 +253,6 @@ export {
     stillLife, 
     idolatry
 };
-*/
+
 
 console.log(nudesAndFigures.filter(item => item.title === 'Lotus Object')[0]);
