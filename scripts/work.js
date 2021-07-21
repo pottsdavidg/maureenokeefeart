@@ -100,7 +100,7 @@ const updatePage = () => {
 
 [...document.querySelectorAll('div.work-link')].forEach(item => {
     
-    item.addEventListener('click', (item.id) => {
+    item.addEventListener('click', () => {
         
         let tagless = title.filter(name => name != item.id);
         console.log(tagless);
@@ -120,7 +120,7 @@ const updatePage = () => {
 
 [...document.querySelectorAll('div.image-container')].forEach(item => {
     
-    item.addEventListener('click', (item.id) => {
+    item.addEventListener('click', () => {
         
         let result = '';
         const displayImage = all.filter(image => image.link === item.id)[0];
