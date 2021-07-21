@@ -96,7 +96,7 @@ const updateDisplay = (page) => {
     display.innerHTML = `
     <div id="large-display" class="selected-display"></div>
     <div id="cover"></div>
-    ${content}>`;
+    ${content}`;
 
 }
 
