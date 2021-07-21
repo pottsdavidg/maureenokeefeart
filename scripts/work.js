@@ -82,7 +82,7 @@ const setHiddenDisplay = (aLink) => {
 
 const updateDisplay = (page) => {
 
-    const content = '';
+    let content = '';
     const display = document.getElementById('display');
 
     if (page == 'home-page') content += fetchArtTemplate('all');
