@@ -116,13 +116,13 @@ const checkClass = (classList, className) => {
 const updatePage = () => {
 
     let elementClasses = [
-        document.getElementById(title[0]).classList,
-        document.getElementById(title[1]).classList,
-        document.getElementById(title[2]).classList,
-        document.getElementById(title[3]).classList,
-        document.getElementById(title[4]).classList,
-        document.getElementById(title[5]).classList,
-        document.getElementById(title[6]).classList
+        document.getElementById(title[0]).className.split(' '),
+        document.getElementById(title[1]).className.split(' '),
+        document.getElementById(title[2]).className.split(' '),
+        document.getElementById(title[3]).className.split(' '),
+        document.getElementById(title[4]).className.split(' '),
+        document.getElementById(title[5]).className.split(' '),
+        document.getElementById(title[6]).className.split(' ')
     ];
 
     for (let i = 0; i < 7; i++) {
