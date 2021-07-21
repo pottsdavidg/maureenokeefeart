@@ -79,18 +79,6 @@ const updateDisplay = (page) => {
 
 }
 
-const selectPage = (ID) => {
-    
-    let tagless = title.filter(name => name != ID);
-    console.log(tagless);
-    tagless.forEach(tag => {
-        document.getElementById(tag).classList.remove('selected-link');
-    });
-    document.getElementById(ID).classList.add('selected-link');
-    updatePage();
-
-}
-
 const updatePage = () => {
 
     let elementClasses = [
@@ -112,16 +100,16 @@ const updatePage = () => {
 
 [...document.querySelectorAll('div.work-link')].forEach(item => {
     
-    item.addEventListener('click', (ID) => {
+    item.addEventListener('click', (item.id) => {
         
-        let tagless = title.filter(name => name != ID);
+        let tagless = title.filter(name => name != item.id);
         console.log(tagless);
         
         tagless.forEach(tag => {
             document.getElementById(tag).classList.remove('selected-link');
         });
         
-        document.getElementById(ID).classList.add('selected-link');
+        document.getElementById(item.id).classList.add('selected-link');
         updatePage();
         
     });
@@ -132,10 +120,10 @@ const updatePage = () => {
 
 [...document.querySelectorAll('div.image-container')].forEach(item => {
     
-    item.addEventListener('click', (aLink) => {
+    item.addEventListener('click', (item.id) => {
         
         let result = '';
-        const displayImage = all.filter(image => image.link === aLink)[0];
+        const displayImage = all.filter(image => image.link === item.id)[0];
         console.log(displayImage);
         
         result += `<img class="large-image" src="${displayImage.link}">`;
