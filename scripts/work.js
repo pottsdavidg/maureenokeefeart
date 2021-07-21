@@ -135,14 +135,10 @@ const updatePage = () => {
     }
 }
 
-const onclickFunctionality = () => {
-    document.getElementById(title[0]).addEventListener('click', selectPage(title[0]));
-    document.getElementById(title[1]).addEventListener('click', selectPage(title[1]));
-    document.getElementById(title[2]).addEventListener('click', selectPage(title[2]));
-    document.getElementById(title[3]).addEventListener('click', selectPage(title[3]));
-    document.getElementById(title[4]).addEventListener('click', selectPage(title[4]));
-    document.getElementById(title[5]).addEventListener('click', selectPage(title[5]));
-    document.getElementById(title[6]).addEventListener('click', selectPage(title[6]));
-}
-
-onclickFunctionality();
+document.getElementById(title[0]).addEventListener('click', selectPage(title[0]));
+document.getElementById(title[1]).addEventListener('click', selectPage(title[1]));
+document.getElementById(title[2]).addEventListener('click', selectPage(title[2]));
+document.getElementById(title[3]).addEventListener('click', selectPage(title[3]));
+document.getElementById(title[4]).addEventListener('click', selectPage(title[4]));
+document.getElementById(title[5]).addEventListener('click', selectPage(title[5]));
+document.getElementById(title[6]).addEventListener('click', selectPage(title[6]));
