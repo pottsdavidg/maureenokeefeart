@@ -126,3 +126,11 @@ const updatePage = () => {
         }
     }
 }
+
+const onclickFunctionality = () => {
+    title.forEach(label => {
+        document.getElementById(label).addEventListener('click', selectPage(label));   
+    });
+}
+
+onclickFunctionality();
