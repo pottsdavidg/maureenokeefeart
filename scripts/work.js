@@ -93,7 +93,10 @@ const updateDisplay = (page) => {
     if (page == 'blin-page') content += fetchArtTemplate('all');
     if (page == 'idol-page') content += fetchArtTemplate('all');
 
-    display.append(content);
+    display.innerHTML = `
+    <div id="large-display" class="selected-display"></div>
+    <div id="cover"></div>
+    ${content}>`;
 
 }
 
