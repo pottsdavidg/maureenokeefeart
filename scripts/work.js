@@ -125,6 +125,7 @@ const updatePage = () => {
         setTimeout(() => {
             let result = '';
             const displayImage = all.filter(image => image.link == item.id)[0];
+            console.log(displayImage);
         
             result += `<img class="large-image" src="${displayImage.link}">`;
             result += `<div class="large-image-description">`;
@@ -137,6 +138,7 @@ const updatePage = () => {
     
             result += `</div><a href="#" id="cancel">BACK</a>`;
             document.getElementById('large-display').innerHTML = result;
+            console.log(result);
         }, 500);
         
     });
