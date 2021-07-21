@@ -122,21 +122,22 @@ const updatePage = () => {
     
     item.addEventListener('click', () => {
         
-        let result = '';
-        const displayImage = all.filter(image => image.link === item.id)[0];
-        console.log(displayImage);
+        setTimeout(() => {
+            let result = '';
+            const displayImage = all.filter(image => image.link == item.id)[0];
         
-        result += `<img class="large-image" src="${displayImage.link}">`;
-        result += `<div class="large-image-description">`;
-        result += `<div>${displayImage.title}</div>`;
-        
-        if (displayImage.hasOwnProperty('style')) result += `<div>${displayImage.style}</div>`;
-        if (displayImage.hasOwnProperty('size')) result += `<div>${displayImage.size}</div>`;
-        if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
-        if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
-        
-        result += `</div><a href="#" id="cancel">BACK</a>`;
-        document.getElementById('large-display').innerHTML = result;
+            result += `<img class="large-image" src="${displayImage.link}">`;
+            result += `<div class="large-image-description">`;
+            result += `<div>${displayImage.title}</div>`;
+    
+            if (displayImage.hasOwnProperty('style')) result += `<div>${displayImage.style}</div>`;
+            if (displayImage.hasOwnProperty('size')) result += `<div>${displayImage.size}</div>`;
+            if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
+            if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
+    
+            result += `</div><a href="#" id="cancel">BACK</a>`;
+            document.getElementById('large-display').innerHTML = result;
+        }, 500);
         
     });
     
