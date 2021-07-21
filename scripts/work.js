@@ -7,6 +7,8 @@ const all = [
     ...art.stillLife
 ];
 
+console.log(all);
+
 const title = [
     'home-page', 
     'mirw-page', 
