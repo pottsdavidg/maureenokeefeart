@@ -19,6 +19,7 @@
 }
 
 .work-link:hover {
+    cursor: pointer;
     background-color: #00000020;
     transition: 1s;
 }
@@ -94,3 +95,11 @@
     display: block;
     opacity: 2;
 }
+
+.large-image-description {
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+    
