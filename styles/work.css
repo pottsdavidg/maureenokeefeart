@@ -90,8 +90,9 @@
     background-color: #ffffff80;
     text-align: center;
     display: flex;
+    border-radius: 10px;
     justify-content: space-around;
-    margin: auto;
+    margin: 10px auto;
     width: 75%;    
 }
 
