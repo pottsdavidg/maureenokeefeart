@@ -119,7 +119,7 @@ const updatePage = () => {
     
     });
 
-    cancelButton.addEventListener('click', () => {
+    document.getElementById('cancel').addEventListener('click', () => {
         document.getElementById('large-display').style.display = 'none';
         document.getElementById('cancel').style.display = 'none';
     });
