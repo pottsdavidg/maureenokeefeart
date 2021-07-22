@@ -104,4 +104,5 @@
 
 #cancel:hover {
     background-color: #ffffff50;
+    cursor: pointer;
 }
