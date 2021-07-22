@@ -70,8 +70,8 @@ const updateDisplay = (page) => {
     if (page == 'idol-page') content += fetchArtTemplate('all');
 
     display.innerHTML = `
-    <div id="large-display" class="selected-display hide-display"></div>
-    <div id="cover" class="hide-display"></div>
+    <div id="large-display" class="selected-display"></div>
+    <div id="cover"></div>
     ${content}`;
 
 }
@@ -112,7 +112,7 @@ const updatePage = () => {
         
             result += `</div><div id="cancel">BACK</div>`;
             document.getElementById('large-display').innerHTML = result;
-            document.getElementById('large-display').style.display = 'block';
+            document.getElementById('large-display').style.display = 'flex';
             document.getElementById('cover').style.display = 'block';
             
             document.getElementById('cancel').addEventListener('click', () => {
