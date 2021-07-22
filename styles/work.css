@@ -104,5 +104,5 @@
 }
 
 .hide-display {
-    visibility: hidden;
+    display: none;
 }
