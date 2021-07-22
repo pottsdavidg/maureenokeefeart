@@ -135,8 +135,16 @@ const updatePage = () => {
 
 });
 
-document.getElementById('cancel').addEventListener('click', () => {
-    document.getElementById('large-display').classList.toggle('hide-display');
-    document.getElementById('cancel').classList.toggle('hide-display');
-})
-window.onload = () => updateDisplay('home-page');
+let cancelButton = document.getElementById('cancel');
+if (cancelButton) {
+    cancelButton.addEventListener('click', () => {
+        document.getElementById('large-display').classList.toggle('hide-display');
+        document.getElementById('cancel').classList.toggle('hide-display');
+    });
+}
+
+let togNum = 0;
+if (togNum == 0) {
+    updateDisplay('home-page');
+    togNum++;
+}
