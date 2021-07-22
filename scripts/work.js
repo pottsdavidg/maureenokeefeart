@@ -113,7 +113,7 @@ const updatePage = () => {
             result += `</div><div id="cancel">BACK</div>`;
             document.getElementById('large-display').innerHTML = result;
             document.getElementById('large-display').style.display = 'block';
-            document.getElementById('cancel').style.display = 'block';
+            document.getElementById('cover').style.display = 'block';
     
         });
     
@@ -121,7 +121,7 @@ const updatePage = () => {
 
     document.getElementById('cancel').addEventListener('click', () => {
         document.getElementById('large-display').style.display = 'none';
-        document.getElementById('cancel').style.display = 'none';
+        document.getElementById('cover').style.display = 'none';
     });
 }
 
