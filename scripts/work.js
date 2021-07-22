@@ -130,6 +130,8 @@ const updatePage = () => {
         document.getElementById('large-display').innerHTML = result;
         document.getElementById('large-display').classList.toggle('hide-display');
         document.getElementById('cancel').classList.toggle('hide-display');
+        console.log(document.getElementById('large-display').innerHTML);
+        console.log(document.getElementById('large-display').className);
 
     });
 
