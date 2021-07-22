@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column  ;
     height: auto;
+    text-align: center;
 }
 
 .shop-content-container {
