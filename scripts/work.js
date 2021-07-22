@@ -110,8 +110,8 @@ const updatePage = () => {
 
 });
 
-[...document.querySelectorAll('img.list-image')].forEach(item => {
-    
+[...document.querySelectorAll('div.image-container')].forEach(item => {
+    console.log('')
     item.addEventListener('click', () => {
 
         let result = '';
@@ -128,10 +128,9 @@ const updatePage = () => {
     
         result += `</div><div id="cancel">BACK</div>`;
         document.getElementById('large-display').innerHTML = result;
-        document.getElementById('large-display').classList.toggle('hide-display');
-        document.getElementById('cancel').classList.toggle('hide-display');
-        console.log(document.getElementById('large-display').innerHTML);
-        console.log(document.getElementById('large-display').className);
+        document.getElementById('large-display').style.display = 'block';
+        document.getElementById('cancel').style.display = 'block';
+        console.log('function ran');
 
     });
 
@@ -140,13 +139,13 @@ const updatePage = () => {
 let cancelButton = document.getElementById('cancel');
 if (cancelButton) {
     cancelButton.addEventListener('click', () => {
-        document.getElementById('large-display').classList.toggle('hide-display');
-        document.getElementById('cancel').classList.toggle('hide-display');
+        document.getElementById('large-display').style.display = 'none';
+        document.getElementById('cancel').style.display = 'none';
     });
 }
 
-let togNum = 0;
-if (togNum == 0) {
+let toggleNumber = 0;
+if (toggleNumber == 0) {
     updateDisplay('home-page');
-    togNum++;
+    toggleNumber++;
 }
