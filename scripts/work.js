@@ -146,6 +146,6 @@ const updatePage = () => {
 
 let toggleNumber = 0;
 if (toggleNumber == 0) {
-    updateDisplay('home-page');
+    updatePage();
     toggleNumber++;
 }
