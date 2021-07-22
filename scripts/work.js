@@ -119,9 +119,7 @@ const updatePage = () => {
     
     });
 
-    let cancelButton = document.getElementById('cancel');
-    if (cancelButton) {
-        cancelButton.addEventListener('click', () => {
+    cancelButton.addEventListener('click', () => {
         document.getElementById('large-display').style.display = 'none';
         document.getElementById('cancel').style.display = 'none';
     });
