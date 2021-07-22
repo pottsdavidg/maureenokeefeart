@@ -119,6 +119,14 @@ const updatePage = () => {
     
     });
 
+    let cancelButton = document.getElementById('cancel');
+    if (cancelButton) {
+    cancelButton.addEventListener('click', () => {
+        document.getElementById('large-display').style.display = 'none';
+        document.getElementById('cancel').style.display = 'none';
+    });
+}
+
 }
 
 [...document.querySelectorAll('div.work-link')].forEach(item => {
@@ -135,14 +143,6 @@ const updatePage = () => {
     });
 
 });
-
-let cancelButton = document.getElementById('cancel');
-if (cancelButton) {
-    cancelButton.addEventListener('click', () => {
-        document.getElementById('large-display').style.display = 'none';
-        document.getElementById('cancel').style.display = 'none';
-    });
-}
 
 let toggleNumber = 0;
 if (toggleNumber == 0) {
