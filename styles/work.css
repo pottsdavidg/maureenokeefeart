@@ -19,7 +19,6 @@
 }
 
 .work-link:hover {
-    cursor: pointer;
     background-color: #00000020;
     transition: 1s;
 }
@@ -58,6 +57,7 @@
 }
 
 #cover {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -69,6 +69,7 @@
 }
 
 #large-display {
+    display: none;
     width: 100%;
     margin: 0 auto;
     position: fixed;
@@ -81,28 +82,15 @@
 .large-image {
     margin: 0 auto;
     width: auto;
-    height: 75vh;
+    height: 80vh;
 }
 
 .large-image-description {
+    padding: 10px;
     background-color: #ffffff80;
     text-align: center;
     display: flex;
     justify-content: space-around;
     margin: auto;
-    width: 50%;  
-}
-
-#large-display:target {
-    display: flex;
-    opacity: 2;
-}
-
-#large-display:target + #cover {
-    display: block;
-    opacity: 2;
-}
-
-.hide-display {
-    display: none;
+    width: 75%;    
 }
