@@ -15,10 +15,12 @@ body {
 }
 
 .explore-link {
+    text-decoration: none;
     font-family: Handwriting;
     padding: 15px;
     margin: auto;
     color: #fff;
+    font-size: 10em;
     border-radius: 10px;
 }
 
