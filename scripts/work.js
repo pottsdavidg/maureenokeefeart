@@ -103,12 +103,12 @@ const updatePage = () => {
             
             result += `<img class="large-image" src="${displayImage.link}">`;
             result += `<div class="large-image-description">`;
-            result += `<div>${displayImage.title}</div>`;
+            result += `<div class="desc-text">${displayImage.title}</div>`;
         
-            if (displayImage.hasOwnProperty('style')) result += `<div>${displayImage.style}</div>`;
-            if (displayImage.hasOwnProperty('size')) result += `<div>${displayImage.size}</div>`;
-            if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
-            if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
+            if (displayImage.hasOwnProperty('style')) result += `<div class="desc-text">${displayImage.style}</div>`;
+            if (displayImage.hasOwnProperty('size')) result += `<div class="desc-text">${displayImage.size}</div>`;
+            if (displayImage.hasOwnProperty('year')) result += `<div class="desc-text">${displayImage.year}</div>`;
+            if (displayImage.hasOwnProperty('sold')) result += `<div class="desc-text">SOLD</div>`;
         
             result += `</div><div id="cancel">BACK</div>`;
             document.getElementById('large-display').innerHTML = result;
