@@ -97,6 +97,7 @@
 
 #cancel {
     margin: 15px auto;
+    width: auto;
     background-color: #ffffff80;
     padding: 10px;
     border-radius: 5px;
