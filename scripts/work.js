@@ -20,11 +20,8 @@ const title = [
 const returnTemplate = (link) => {
     return `
     <div id="${link}" class="image-container">
-        <a href="#large-display">
-            <img class="list-image" src="${link}" width="auto">
-        </a>
-    </div>
-    `;
+        <img class="list-image" src="${link}" width="auto">
+    </div>`;
 }
 
 const fetchArtTemplate = (key) => {
@@ -73,8 +70,8 @@ const updateDisplay = (page) => {
     if (page == 'idol-page') content += fetchArtTemplate('all');
 
     display.innerHTML = `
-    <div id="large-display" class="selected-display"></div>
-    <div id="cover"></div>
+    <div id="large-display" class="selected-display hide-display"></div>
+    <div id="cover" class="hide-display"></div>
     ${content}`;
 
 }
@@ -101,30 +98,24 @@ const updatePage = () => {
 [...document.querySelectorAll('div.work-link')].forEach(item => {
     
     item.addEventListener('click', () => {
-        
+    
         let tagless = title.filter(name => name != item.id);
-        console.log(tagless);
-        
         tagless.forEach(tag => {
             document.getElementById(tag).classList.remove('selected-link');
         });
-        
         document.getElementById(item.id).classList.add('selected-link');
         updatePage();
-        
+    
     });
-    
-    console.log(item.id);
-    
+
 });
 
 [...document.querySelectorAll('div.image-container')].forEach(item => {
     
     item.addEventListener('click', () => {
-        
+
         let result = '';
         const displayImage = all.filter(image => image.link == item.id)[0];
-        console.log(displayImage);
         
         result += `<img class="large-image" src="${displayImage.link}">`;
         result += `<div class="large-image-description">`;
@@ -135,14 +126,17 @@ const updatePage = () => {
         if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
         if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
     
-        result += `</div><a href="#" id="cancel">BACK</a>`;
+        result += `</div><div id="cancel">BACK</div>`;
         document.getElementById('large-display').innerHTML = result;
-        console.log(result);
-        
+        document.getElementById('large-display').classList.toggle('hide-display');
+        document.getElementById('cancel').classList.toggle('hide-display');
+
     });
-    
-    console.log(item.id);
-    
+
 });
 
+document.getElementById('cancel').addEventListener('click', () => {
+    document.getElementById('large-display').classList.toggle('hide-display');
+    document.getElementById('cancel').classList.toggle('hide-display');
+})
 window.onload = () => updateDisplay('home-page');
