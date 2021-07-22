@@ -8,7 +8,21 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
-    font-family: Dosis, 'Trebuchet MS';
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #000;
+}
+
+.explore-link {
+    font-family: Handwriting;
+    padding: 15px;
+    margin: auto;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.explore-link:hover {
+    background-color: #fff;
+    color: #000;
 }
