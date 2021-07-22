@@ -93,6 +93,32 @@ const updatePage = () => {
             updateDisplay(title[i]);
         }
     }
+
+    [...document.querySelectorAll('div.image-container')].forEach(item => {
+    
+        item.addEventListener('click', () => {
+    
+            let result = '';
+            const displayImage = all.filter(image => image.link == item.id)[0];
+            
+            result += `<img class="large-image" src="${displayImage.link}">`;
+            result += `<div class="large-image-description">`;
+            result += `<div>${displayImage.title}</div>`;
+        
+            if (displayImage.hasOwnProperty('style')) result += `<div>${displayImage.style}</div>`;
+            if (displayImage.hasOwnProperty('size')) result += `<div>${displayImage.size}</div>`;
+            if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
+            if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
+        
+            result += `</div><div id="cancel">BACK</div>`;
+            document.getElementById('large-display').innerHTML = result;
+            document.getElementById('large-display').style.display = 'block';
+            document.getElementById('cancel').style.display = 'block';
+    
+        });
+    
+    });
+
 }
 
 [...document.querySelectorAll('div.work-link')].forEach(item => {
@@ -106,32 +132,6 @@ const updatePage = () => {
         document.getElementById(item.id).classList.add('selected-link');
         updatePage();
     
-    });
-
-});
-
-[...document.querySelectorAll('div.image-container')].forEach(item => {
-    console.log('')
-    item.addEventListener('click', () => {
-
-        let result = '';
-        const displayImage = all.filter(image => image.link == item.id)[0];
-        
-        result += `<img class="large-image" src="${displayImage.link}">`;
-        result += `<div class="large-image-description">`;
-        result += `<div>${displayImage.title}</div>`;
-    
-        if (displayImage.hasOwnProperty('style')) result += `<div>${displayImage.style}</div>`;
-        if (displayImage.hasOwnProperty('size')) result += `<div>${displayImage.size}</div>`;
-        if (displayImage.hasOwnProperty('year')) result += `<div>${displayImage.year}</div>`;
-        if (displayImage.hasOwnProperty('sold')) result += `<div class="error-text">SOLD</div>`;
-    
-        result += `</div><div id="cancel">BACK</div>`;
-        document.getElementById('large-display').innerHTML = result;
-        document.getElementById('large-display').style.display = 'block';
-        document.getElementById('cancel').style.display = 'block';
-        console.log('function ran');
-
     });
 
 });
