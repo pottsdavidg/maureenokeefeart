@@ -125,8 +125,6 @@ const updatePage = () => {
     });
 }
 
-}
-
 [...document.querySelectorAll('div.work-link')].forEach(item => {
     
     item.addEventListener('click', () => {
