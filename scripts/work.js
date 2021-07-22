@@ -110,7 +110,7 @@ const updatePage = () => {
 
 });
 
-[...document.querySelectorAll('div.image-container')].forEach(item => {
+[...document.querySelectorAll('img.list-image')].forEach(item => {
     
     item.addEventListener('click', () => {
 
