@@ -94,7 +94,7 @@
     border-radius: 10px;
     justify-content: space-around;
     margin: 10px auto;
-    width: 75%;    
+    width: auto;    
 }
 
 .desc-text {
