@@ -96,6 +96,10 @@
     width: 75%;    
 }
 
+.desc-text {
+    margin: 0px 10px;
+}
+
 #cancel {
     margin: 15px auto;
     width: auto;
