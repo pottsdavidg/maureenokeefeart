@@ -114,15 +114,16 @@ const updatePage = () => {
             document.getElementById('large-display').innerHTML = result;
             document.getElementById('large-display').style.display = 'block';
             document.getElementById('cover').style.display = 'block';
+            
+            document.getElementById('cancel').addEventListener('click', () => {
+                document.getElementById('large-display').style.display = 'none';
+                document.getElementById('cover').style.display = 'none';
+            });
     
         });
     
     });
-
-    document.getElementById('cancel').addEventListener('click', () => {
-        document.getElementById('large-display').style.display = 'none';
-        document.getElementById('cover').style.display = 'none';
-    });
+    
 }
 
 [...document.querySelectorAll('div.work-link')].forEach(item => {
